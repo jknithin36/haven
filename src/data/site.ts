@@ -7,9 +7,10 @@ export type NavItem = { label: string; to: string };
 // Where the site is deployed, without a trailing slash. Set VITE_SITE_URL in
 // .env (see .env.example); canonical links, social cards, and the sitemap
 // use it.
-const siteUrl = (
-  import.meta.env.VITE_SITE_URL || DEFAULT_SITE_URL
-).replace(/\/+$/, "");
+const siteUrl = (import.meta.env.VITE_SITE_URL || DEFAULT_SITE_URL).replace(
+  /\/+$/,
+  "",
+);
 
 // Brand and navigation shared by the navbar and footer.
 export const site = {
@@ -38,8 +39,13 @@ export const site = {
     link: { label: "Explore the admin dashboard", to: "/admin" },
     dismiss: "Dismiss announcement",
   },
+  skipLink: "Skip to content",
   nav: {
     label: "Main",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    menuTitle: "Menu",
+    contactTitle: "Talk to us",
     primary: [
       { label: "Properties", to: "/properties" },
       { label: "Neighborhoods", to: "/neighborhoods" },

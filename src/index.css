@@ -136,6 +136,9 @@
     }
   html {
     @apply font-sans;
+    /* No double-tap zoom delay; taps show our own pressed states */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     }
   /* Smooth scrolling for in-page links, unless the visitor prefers less motion */
   @media (prefers-reduced-motion: no-preference) {

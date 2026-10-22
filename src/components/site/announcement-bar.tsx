@@ -47,7 +47,7 @@ function AnnouncementBar() {
           type="button"
           onClick={() => setDismissed(true)}
           aria-label={copy.dismiss}
-          className="absolute top-1/2 right-4 -translate-y-1/2 rounded-md p-1.5 opacity-80 outline-none transition-opacity hover:opacity-100 focus-visible:ring-2 focus-visible:ring-primary-foreground sm:right-6"
+          className="absolute top-1/2 right-2 flex size-10 -translate-y-1/2 items-center justify-center rounded-md opacity-80 outline-none transition-opacity hover:opacity-100 focus-visible:ring-2 focus-visible:ring-primary-foreground sm:right-4"
         >
           <HugeiconsIcon
             icon={Cancel01Icon}
