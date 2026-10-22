@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="application-name" content="Haven" />
+    <meta name="apple-mobile-web-app-title" content="Haven" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Defaults for crawlers that don't run JavaScript. The app removes
+         these on start, and each page renders its own (src/components/page-meta.tsx). -->
+    <title data-static-meta>Haven | Homes for sale and rent on Florida's Gulf Coast</title>
+    <meta
+      data-static-meta
+      name="description"
+      content="Haven helps you buy, sell, and rent beach homes, condos, and family houses across Florida's Gulf Coast."
+    />
+    <meta data-static-meta property="og:type" content="website" />
+    <meta data-static-meta property="og:site_name" content="Haven" />
+    <meta data-static-meta property="og:title" content="Haven | Homes for sale and rent on Florida's Gulf Coast" />
+    <meta
+      data-static-meta
+      property="og:description"
+      content="Haven helps you buy, sell, and rent beach homes, condos, and family houses across Florida's Gulf Coast."
+    />
+    <meta data-static-meta property="og:image" content="%SITE_URL%/og-image.png" />
+    <meta data-static-meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <noscript>Haven needs JavaScript to show homes, neighborhoods, and agents. Please turn it on and reload the page.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

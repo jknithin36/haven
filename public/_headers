@@ -1,0 +1,16 @@
+# Netlify / Cloudflare Pages response headers.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Keep the dashboard out of search results.
+/admin
+  X-Robots-Tag: noindex, nofollow
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+
+# Hashed build files never change.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

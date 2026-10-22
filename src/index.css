@@ -1,0 +1,346 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/onest";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --color-subtle: var(--subtle);
+    --color-faint: var(--faint);
+    --color-attention: var(--attention);
+    --shadow-float: 0 12px 40px -12px rgb(0 0 0 / 0.18);
+    --font-heading: var(--font-sans);
+    --font-sans: 'Onest Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --subtle: oklch(0.985 0 0);
+    --faint: oklch(0.72 0 0);
+    --attention: #dc2626;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.488 0.243 264.376);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.967 0.001 286.375);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.809 0.105 251.813);
+    --chart-2: oklch(0.623 0.214 259.815);
+    --chart-3: oklch(0.546 0.245 262.881);
+    --chart-4: oklch(0.488 0.243 264.376);
+    --chart-5: oklch(0.424 0.199 265.638);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.546 0.245 262.881);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.424 0.199 265.638);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.809 0.105 251.813);
+    --chart-2: oklch(0.623 0.214 259.815);
+    --chart-3: oklch(0.546 0.245 262.881);
+    --chart-4: oklch(0.488 0.243 264.376);
+    --chart-5: oklch(0.424 0.199 265.638);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.623 0.214 259.815);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+    }
+  html {
+    @apply font-sans;
+    }
+  /* Smooth scrolling for in-page links, unless the visitor prefers less motion */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+/* ------------------------------------------------------------------ */
+/* Haven design tokens. Every section uses these instead of one-off    */
+/* values, so spacing and type stay consistent across the site.        */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Page width: max-w-page */
+  --container-page: 75rem; /* 1200px */
+
+  /* Comfortable reading width for paragraphs: max-w-measure */
+  --container-measure: 44ch;
+
+  /* Display size for the hero headline: text-display */
+  --text-display: 3.625rem; /* 58px */
+  --text-display--line-height: 1.1;
+}
+
+/* Soft drifting glows for the announcement bar */
+@theme {
+  --animate-glow-a: glow-a 18s ease-in-out infinite alternate;
+  --animate-glow-b: glow-b 24s ease-in-out infinite alternate;
+
+  /* Each glow wanders across the bar on its own slow path. */
+  @keyframes glow-a {
+    from {
+      transform: translate(-30%, -10%) scale(1);
+    }
+    to {
+      transform: translate(230%, 10%) scale(1.15);
+    }
+  }
+
+  @keyframes glow-b {
+    from {
+      transform: translate(230%, 15%) scale(1.1);
+    }
+    to {
+      transform: translate(-30%, -15%) scale(0.95);
+    }
+  }
+}
+
+/* Layout */
+@utility page-container {
+  @apply mx-auto w-full max-w-page px-6;
+}
+
+@utility section-y {
+  @apply py-24 md:py-32;
+}
+
+/* Type scale, largest to smallest. Clear size steps between levels;
+   weights: 500 for headings and titles, 400 for body text. */
+@utility type-display {
+  @apply text-4xl leading-[1.1] font-medium text-balance md:text-5xl lg:text-display;
+}
+
+@utility type-heading {
+  @apply text-3xl font-medium text-balance md:text-4xl;
+}
+
+/* Section headings inside a page (e.g. "Key details" on a home page) */
+@utility type-subheading {
+  @apply text-2xl font-medium text-balance;
+}
+
+@utility type-title {
+  @apply text-xl leading-snug font-medium;
+}
+
+@utility type-quote {
+  @apply text-xl leading-snug md:text-3xl;
+}
+
+@utility type-stat {
+  @apply text-2xl tabular-nums sm:text-3xl md:text-4xl;
+}
+
+@utility type-eyebrow {
+  @apply text-sm tracking-wide uppercase;
+}
+
+/* Oversized number for the 404 page (120px, 180px from md) */
+@utility type-giant {
+  @apply text-[7.5rem] leading-none font-semibold tracking-tight md:text-[11.25rem];
+}
+
+/* Shared focus ring for links and cards */
+@utility focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Admin dashboard: calm, monochrome tokens. AdminLayout adds the      */
+/* class to <html> while you're inside /admin, so dialogs, menus, and  */
+/* toasts (rendered in portals) pick it up too.                        */
+/* ------------------------------------------------------------------ */
+.admin-theme {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --subtle: #fafafa;
+    --muted: #f2f2f2;
+    --muted-foreground: #6b6b6b;
+    --faint: #a3a3a3;
+    --border: #e8e8e8;
+    --input: #e8e8e8;
+    --primary: #0a0a0a;
+    --primary-foreground: #ffffff;
+    --accent: #f2f2f2;
+    --accent-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --ring: #0a0a0a;
+    --radius: 0.625rem; /* 10px controls, 14px panels via rounded-xl */
+}
+
+/* Toasts: black with white text, bottom-right */
+.admin-theme [data-slot="toast"] {
+    --popover: #0a0a0a;
+    --popover-foreground: #ffffff;
+    --muted-foreground: #a3a3a3;
+    border-color: transparent;
+    border-radius: 12px;
+    box-shadow: var(--shadow-float);
+    font-size: 14px;
+}
+
+/* Overlays dim quietly; no frosted glass */
+.admin-theme [data-slot="sheet-overlay"],
+.admin-theme [data-slot="dialog-overlay"],
+.admin-theme [data-slot="alert-dialog-overlay"] {
+    backdrop-filter: none;
+    background: rgb(10 10 10 / 0.08);
+}
+
+/* Toasts stay above panels and dialogs so Undo is always reachable */
+[data-slot="toast-viewport"] {
+    z-index: 60;
+}
+
+/* While a right-hand panel is open, toasts move out of its way: beside it
+   on wide screens, to the top on phones. */
+body:has([data-slot="sheet-content"][data-side="right"]) [data-slot="toast-viewport"] {
+    top: 1rem;
+    bottom: auto;
+}
+@media (min-width: 40rem) {
+    body:has([data-slot="sheet-content"][data-side="right"]) [data-slot="toast-viewport"] {
+        top: auto;
+        bottom: 1rem;
+        right: calc(440px + 1rem);
+    }
+}
+
+/* Undo: white text on the black toast, no box */
+.admin-theme [data-slot="toast-action"] {
+    border-color: transparent;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+}
+.admin-theme [data-slot="toast-action"]:hover {
+    background: rgb(255 255 255 / 0.12);
+}
+.admin-theme [data-slot="toast-close"]:hover {
+    color: #ffffff;
+    background: rgb(255 255 255 / 0.12);
+}
+
+/* Floating layers get the one soft shadow */
+.admin-theme [data-slot="dropdown-menu-content"],
+.admin-theme [data-slot="popover-content"],
+.admin-theme [data-slot="select-content"],
+.admin-theme [data-slot="dialog-content"],
+.admin-theme [data-slot="command-dialog"] {
+    box-shadow: var(--shadow-float);
+}
+
+/* Admin type scale */
+@utility admin-title {
+  @apply text-[1.75rem] leading-tight font-semibold tracking-tight;
+}
+
+@utility admin-section {
+  @apply text-[0.9375rem] font-semibold;
+}
+
+@utility admin-meta {
+  @apply text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase;
+}
+
+@utility admin-number {
+  @apply text-[2.5rem] leading-none font-medium tracking-tight tabular-nums md:text-[3.5rem];
+}
+
+/* Admin focus ring: 2px black with 2px offset */
+@utility admin-focus {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2;
+}
